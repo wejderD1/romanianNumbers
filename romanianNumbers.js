@@ -7,6 +7,11 @@
 // D          500
 // M          1,000
 
+/**
+ * 
+ * @param {Number} number 
+ * @returns - romanian numbers
+ */
 function solution(number) {
   let num = String(number)
   let thouthend = null
@@ -35,12 +40,14 @@ function solution(number) {
     one = num
   }
 
-  //об'єкт перевожу в масив. виконую функцію фільтрації. і знову перевожу в об'єкт
   numObj = Object.fromEntries(Object.entries(numObj)
     .filter(([el, val]) => parseInt(val) != 0))
 
-  console.log(numObj)
-
+    /**
+     * 
+     * @param {} numberObject - object that contains numbers and a digit
+     * @returns - generated romanian numbers 
+     */
     function segregator(numberObject) {
       let result = ''
       const romanianNumbers = {
